@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 
-int pot(int, int)
+float pot(int, int);
 
 int main()
 {
@@ -16,7 +16,14 @@ int main()
     printf("Escreva o valor do exponte: ");
     scanf("%d", &b);
 
-    printf("O valor de %d elevado a %d é: %d", a, b, pot(a, b));
+    printf("O valor de %d elevado a %d é: %g\n", a, b, pot(a, b));
 }
 
-int pot(int a, int b);
+float pot(int a, int b)
+{
+    float c = 1;
+    if(b>0) for(int i = 0; i < b; i++) c *= a;
+    else if(b<0) for(int i = 0; i < -b; i++) c /= a;
+
+    return c;
+}
