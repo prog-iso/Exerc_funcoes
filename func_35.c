@@ -47,15 +47,3 @@ void str_rep(char* str_base, char* str_rep, int* rep)
         }
     }
 }
-
-int main()
-{
-    char list[] = "dia, cachorro, bola, parque, dia, feliz, sol, dia, dia";
-    char rep[] = "dia";
-    int num_rep[5];
-    for(int i = 0; i <5; i++) num_rep[i] = 0;
-
-    str_rep(list, rep, num_rep);
-    for(int i = 0; i < 5; i++) printf("%d\n", num_rep[i]);
-    
-}
